@@ -1,6 +1,8 @@
 import simpy
 import pandas as pd
 from agent import EpsilonGreedyAgent
+from agent2 import EpsilonGreedyAgent2
+
 import numpy as np
 from utils import _print
 
@@ -13,7 +15,7 @@ waitlist = []
 
 state = 0
 
-agent = EpsilonGreedyAgent(0.2)
+agent = EpsilonGreedyAgent2(0.2)
 
 
 class Server(object):
@@ -91,4 +93,4 @@ def process_to_waitlist(env, _process, server, all_average_times, all_env_now):
     all_env_now.append(env.now)
 
     # print(
-    # f'Time [{env.now}]  | Average waiting time [{env.average_wait_time}]', DEBUG)
+    #     f'Time [{env.now}]  | Average waiting time [{env.average_wait_time}]', DEBUG)

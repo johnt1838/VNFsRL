@@ -1,6 +1,6 @@
 import simpy
 import pandas as pd
-from serverAgentOptimal import *
+from serverAgent import *
 import matplotlib.pyplot as plt
 
 
